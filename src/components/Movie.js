@@ -36,20 +36,17 @@ const Movie = () => {
             />
             <Grid header='Cast'>
             {movie.actors.map(actor => {
-
-                if(!actor.profile_path){
-                    return;
-                }
-                return (<Actor
-                key = {actor.credit_id}
-                name = {actor.name}
-                character = {actor.character}
-                imageUrl={
-                    actor.profile_path
-                    ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
-                    : NoImage
-                }
-                />);
+                return (
+                    <Actor
+                    key = {actor.credit_id}
+                    name = {actor.name}
+                    character = {actor.character}
+                    imageUrl={
+                        actor.profile_path
+                        ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
+                        : NoImage
+                    }
+                    />);
             })};
             </Grid>
            
