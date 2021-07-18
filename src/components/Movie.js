@@ -47,7 +47,7 @@ const Movie = () => {
                         : NoImage
                     }
                     />);
-            })};
+            })}
             </Grid>
            
         </>

@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
     width: 90%;
+    max-width: var(--maxWidth);
     background:var(--medGray);
     border-radius: 20px;
     padding:10px;

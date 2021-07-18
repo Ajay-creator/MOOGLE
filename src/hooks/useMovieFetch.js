@@ -15,14 +15,21 @@ export const useMovieFetch = (movieId) => {
 
                 const movie = await API.fetchMovie(movieId);
                 const credits = await API.fetchCredits(movieId);
+                console.log(movie);
+                console.log(credits);
                 // Get Directors only
                 const directors = credits.crew.filter(
                     member => member.job === "Director"
                 );
 
+                // Cast with only profile_path available
+                const actors = credits.cast.filter(
+                    actor => actor.profile_path !==null
+                );
+
                 setstate({
                     ...movie,
-                    actors:credits.cast,
+                    actors,
                     directors,
                 })
                 setLoading(false);

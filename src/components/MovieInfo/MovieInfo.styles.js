@@ -27,6 +27,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
     width:70%;
+    max-width: var(--maxWidth);
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -46,10 +47,17 @@ export const Content = styled.div`
         background:rgba(0,0,0,0.5);
         border-radius:10px;
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width:1185px){
         width:100%;
         justify-content: center;
+        padding-top:30px
     }
+    @media screen and (max-width:450px){
+        width:100%;
+        justify-content: center;
+        padding-top:0;
+    }
+
 `;
 
 export const Text = styled.div`
@@ -62,10 +70,11 @@ export const Text = styled.div`
     }
     .directors-rating{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: flex-start;
         padding:20px 0px;
         color:#fff;
+        flex-wrap: wrap;
     }
     .score{
         height:40px;
@@ -77,10 +86,11 @@ export const Text = styled.div`
         align-items: center;
         justify-content: center;
     }
-    .director{
-        margin-left:50px;
+    .gap{
+        margin-right:10px;
     }
-    @media screen and (max-width:768px){
+    
+    @media screen and (max-width:1185px){
         width:100%;
 
     }

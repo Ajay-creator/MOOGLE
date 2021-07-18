@@ -30,15 +30,19 @@ const MovieInfo = ({movie}) => (
                     <p>{movie.overview}</p>
 
                     <div className="directors-rating">
-                        <div className="rating">
+                        <div className="rating gap">
                             <h3>RATING</h3>
                             <div className="score">{movie.vote_average}</div>
                         </div>
-                        <div className="director">
+                        <div className="director gap">
                             <h3>DIRECTOR{movie.directors > 1 ? 'S' : ''}</h3>
                             {movie.directors.map(director => (
                                 <p key={director.credit_id}>{director.name}</p>
                             ))}
+                        </div>
+                        <div className="release gap">
+                            <h3>RELEASE DATE</h3>
+                            <p>{movie.release_date}</p>
                         </div>
                     </div>
                 </Text>
